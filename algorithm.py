@@ -14,6 +14,8 @@ class DP:
         self.values[1, 4] = 0
         self.values[2, 4] = 0
 
+        print(self.values[1:-1, 1:-1])
+
     def run(self):
         while True:
             max_change = 0

@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[left=2cm, right=3cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\usepackage{fancybox}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=4
+}
+\lstset{style=mystyle}
+
+\usepackage{xepersian}
+\settextfont[]{XB Yas}
+
+\title{
+حل مسئله‌ی راهروی مارپیچ با برنامه‌سازی پویا
+}
+
+\author{\\امید صادق‌نژاد\\
+
+9912654}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	\hrule
+	\bigskip
+	
+	نتایج کد پیاده‌سازی شده برای مسئله‌ی راهروی مارپیچ به صورت زیر می‌باشد. حرکت ها به این صورت می‌باشند
+	\\
+	\lr{
+\{0:up, 1:down, 2:right, 3:left\}	
+}
+	\\
+	
+	\bigskip
+	
+	برای حالتی که هر خانه امتیاز 
+	\lr{-0.04}
+	باشد:
+	مقادیر سیاست‌ها و ارزش هر خانه در ابتدای الگوریتم به صورت زیر است.
+	\begin{latin}
+		\begin{lstlisting}
+		[ 1.  2.  2.  1.]
+		[ 1. nan  0.  2.]
+		[ 0.  0.  2.  1.]]
+		
+		[[0.63945675 0.71107754 0.62066005 0.         ]
+		[0.87689969        nan  0.66123633 0.         ]
+		[0.51633973 0.53541164  0.41536241 0.51248974]]
+		\end{lstlisting}
+	\end{latin}
+
+این مقادیر در انتهای آموزش الگوریتم به صورت زیر می‌باشد.
+	\begin{latin}
+	\begin{lstlisting}
+	   [[0.92  0.96  1.    0. ]
+		[0.88  nan   0.96  0. ]
+		[0.84  0.88  0.92 0.88]]
+	
+       [[ 2.  2.   2.   1.]
+		[ 0. nan   0.   2.]
+		[ 2.  2.   0.   3.]]
+	\end{lstlisting}
+\end{latin}
+	
+	
+	برای حالتی که هر خانه امتیاز 
+	\lr{-4}
+	باشد:
+	
+		\begin{latin}
+		\begin{lstlisting}
+		[[ 1.  0.  2.  2.]
+		[ 1. nan  0.  1.]
+		[ 1.  1.  2.  1.]]
+		
+		[[0.45017349 0.49564106 0.84728801 0.        ]
+		[0.39408231        nan 0.16206914 0.        ]
+		[0.60292376 0.46087325 0.50513331 0.53498239]]
+		\end{lstlisting}
+	\end{latin}
+	
+	این مقادیر در انتهای آموزش الگوریتم به صورت زیر می‌باشد.
+	\begin{latin}
+		\begin{lstlisting}
+		[[ -7.  -3.   1.   0.]
+		[-11.  nan  -1.   0.]
+		[-13.  -9.  -5.  -1.]]
+		
+		[[ 2.  2.  2.  2.]
+		[ 0. nan  2.  1.]
+		[ 2.  2.  2.  0.]]
+		\end{lstlisting}
+	\end{latin}
+در حالت دوم عامل سعی دارد سریع‌تر به پایان برسد.
+	
+\end{document}

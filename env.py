@@ -15,7 +15,7 @@ class Env:
 
         self.states_indices = self.return_states_indices()
 
-        self.rewards = np.zeros((5, 6))
+        self.rewards = np.full((5, 6), fill_value=-0.04)
         self.rewards[1, 4] = 1
         self.rewards[2, 4] = -1
 
@@ -23,7 +23,7 @@ class Env:
         self.policy[1:-1, 1:-1] = np.random.randint(0, 3, (3, 4))
         self.policy[2, 2] = np.nan
 
-        print(self.policy)
+        print(self.policy[1:-1, 1:-1])
 
     def set_state(self, state):
         self.state = state
